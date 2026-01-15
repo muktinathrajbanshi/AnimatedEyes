@@ -6,6 +6,16 @@
     <title>Animated Eyes</title>
   </head>
   <body>
-    <h1>Welcome to Animated Eyes!</h1>
+    <div class="container">
+      <div class="centerDiv"></div>
+    </div>
+
+    <script>
+      const mouseMove = (event) => {
+        console.log(` x value = ${event.clientX} & Y value = ${event.client} `);
+      };
+
+      window.addEventListener("mousemove", mouseMove);
+    </script>
   </body>
 </html>
