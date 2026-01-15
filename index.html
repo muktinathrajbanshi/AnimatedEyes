@@ -11,14 +11,16 @@
     </div>
 
     <script>
-      let mouseXStartPoint = 0;
+      let mouseXStartPoint = 300;
       let mouseXEndPoint = window.innerWidth;
       let currentXPosition = 0;
       let fracXValue = 0;
 
+      let mouseXRange = mouseXEndPoint - mouseXStartPoint;
+
       const mouseMove = (event) => {
         // ` x value = ${event.clientX} & Y value = ${event.clientY} `
-        currentXPosition = event.clientX;
+        currentXPosition = event.clientX - mouseXStartPoint;
         fracXValue = currentXPosition / mouseXEndPoint;
         console.log(fracXValue);
       };
