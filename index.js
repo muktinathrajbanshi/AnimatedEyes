@@ -26,11 +26,18 @@ let pupilRange = 200;
         // ` x value = ${event.clientX} & Y value = ${event.clientY} `
         currentXPosition = event.clientX - mouseXStartPoint;
         fracXValue = currentXPosition / mouseXRange;
-        console.log("X = " + fracXValue);
+        // console.log("X = " + fracXValue);
 
         currentYPosition = event.clientY;
         fracYValue = currentYPosition / mouseYEndPoint;
-        console.log("Y = " + fracYValue);
+        // console.log("Y = " + fracYValue);
+
+        let pupilXCurrentPosition = fracXValue * pupilRange;
+
+        pupilsArr.forEach((curPupil) => {
+            curPupil.style.transform= `translateX(${pupilXCurrentPosition}px)`;
+        })
+
       };
 
       window.addEventListener("mousemove", mouseMove);
