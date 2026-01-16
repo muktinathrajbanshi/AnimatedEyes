@@ -23,57 +23,48 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .eyes {
   width: 100%;
   height: 100%;
-  /* border: 1px solid red; */
-  /* position: relative; */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
-.eyes::before {
-  content: "";
+.eye {
   width: 40%;
   height: 40%;
-  margin-left: 1.5rem;
-  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.2);
+  background: #fff;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
   position: relative;
+  overflow: hidden;
 }
 
-.eyes::after {
-  content: "";
-  width: 40%;
-  height: 40%;
-  margin-right: 1.5rem;
-  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-
-.eyes::before .eye {
+.pupil {
   width: 20%;
   height: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: blue;
+  background: blue;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   position: absolute;
-}
-
-.eye::before {
-  width: 15%;
-  height: 15%;
-  background-color: yellow;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
