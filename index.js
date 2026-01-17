@@ -50,4 +50,6 @@ let pupilsArr = Array.from(pupils);
       }
 
       window.addEventListener("mousemove", mouseMove);
+      window.addEventListener("pointermove", mouseMove);
+
       window.addEventListener("resize", windowResize);
