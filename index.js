@@ -37,7 +37,9 @@ let pupilsArr = Array.from(pupils);
         let pupilYCurrentPosition = pupilStartPoint + (fracYValue * pupilRange);
 
         pupilsArr.forEach((curPupil) => {
-            curPupil.style.transform= `translate(${pupilXCurrentPosition}px, ${pupilYCurrentPosition}px)`;
+          curPupil.style.setProperty("--x", `${pupilXCurrentPosition}px`);
+          curPupil.style.setProperty("--y", `${pupilYCurrentPosition}px`);
+            // curPupil.style.transform= `translate(${pupilXCurrentPosition}px, ${pupilYCurrentPosition}px)`;
         })
 
       };
