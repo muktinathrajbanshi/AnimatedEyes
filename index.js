@@ -5,13 +5,13 @@ console.log(pupils);
 
 let pupilsArr = Array.from(pupils);
 
-
-let pupilStartPoint = -100;
-let pupilRange = 200;
+    // pupils movements
+    let pupilStartPoint = -100;
+    let pupilRange = 200;
 
   // mouse X position
-      let mouseXStartPoint = 0;
       let mouseXEndPoint = window.innerWidth;
+      let mouseXStartPoint = 0;
       let currentXPosition = 0;
       let fracXValue = 0;
 
@@ -42,4 +42,12 @@ let pupilRange = 200;
 
       };
 
+      const windowResize = () => {
+         mouseXEndPoint = window.innerWidth;
+         mouseXRange = mouseXEndPoint - mouseXStartPoint;
+         mouseYEndPoint = window.innerHeight;
+
+      }
+
       window.addEventListener("mousemove", mouseMove);
+      window.addEventListener("resize", windowResize);
