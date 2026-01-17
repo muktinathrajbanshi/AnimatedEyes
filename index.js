@@ -32,7 +32,14 @@ let pupilRange = 200;
         fracYValue = currentYPosition / mouseYEndPoint;
         // console.log("Y = " + fracYValue);
 
-        let pupilXCurrentPosition = fracXValue * pupilRange;
+        let pupilXCurrentPosition = pupilStartPoint + (fracXValue * pupilRange);
+        // 0-200px
+        // -100 + 0 = -100
+        // -100 +200 = 100
+
+
+        // strt = 0;
+        // width = 250;
 
         pupilsArr.forEach((curPupil) => {
             curPupil.style.transform= `translateX(${pupilXCurrentPosition}px)`;
